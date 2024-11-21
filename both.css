@@ -1,0 +1,341 @@
+.container1{
+     text-align: center; 
+    margin-left: 60%;
+     
+    
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 3px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+    
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+span{
+    color: black;
+    font-weight: bold;
+}
+/* 
+.popup {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 60%;
+    width: 20%;
+    height: 9%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close-btn {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 90%;
+}
+
+.user-icon, .cart-icon {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin-left: 5px;
+    font-size: 14px;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* margin-top: 20px; */
+}
+
+.card {
+    background-color:rgba(255, 240, 247, 0.973); 
+    /* background-color: rgba(255, 0, 119, 0.041); */
+    border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 50%;
+    opacity: 100%;
+    /* width: calc(25% - 20px); */
+}
+.card:hover{
+    background-color: aliceblue;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card h2 {
+    color: #333;
+    font-size: 1.2em;
+}
+
+.buy-button {
+    /* background: #4CAF50; */
+    color: #ffee80;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+
+.buy-button:hover {
+    /* background: #45a049; */
+    text-decoration: underline;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 95.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.footer{
+    background:#ffee80;
+    padding-bottom: 8rem;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    padding:1rem 0;
+    color: #130f40;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    padding:1rem 0;
+    color:  #666;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:  #130f40;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:1.5rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 2rem;
+    color: #130f40;
+}
+
+.footer .credit a{
+    color: white;
+    background-color: darkgreen;
+}
+
+
+.footer .credit a:hover{
+    color: white;
+    background-color: tomato;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+
+    .header.active{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: block;
+    }
+
+    #menu-btn.fa-times{
+        transform:rotate(180deg);
+    }
+
+    #login-btn .btn{
+        display: none;
+       
+    }
+    #reg-btn .btn{
+        margin-left: 200px;
+    }
+
+    #login-btn i{
+        display: block;
+        margin-left: 220px;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background: #fff;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar a{
+        margin:2rem;
+        display: block;
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}
+
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align for mobile display */
+    }
+
+    .card {
+        width: 90%; /* Make cards take up full width on mobile */
+        margin: 10px 0; /* Add margin for spacing between cards */
+    }
+
+    h1 {
+        font-size: 2em; /* Slightly smaller heading on mobile */
+    }
+    
+    span {
+        font-size: 2em; /* Adjust span font size */
+        
+    }
+
+     .buy-button {
+        width: 100%; /* Make buttons full width on mobile */
+        height: 40px; /* Increase height for better touch target */
+        font-size: 2em;
+    }
+
+    input {
+        width: 90%; /* Adjust input width on mobile */
+    }
+  
+    .card h2 {
+        font-size: 2em; /* Adjust card title font size */
+    }
+    p{
+        font-size: 2em;
+    }
+}
