@@ -1,3 +1,50 @@
+header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    background-color:white;
+    align-items: center;
+    background-color: #ffcc57;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.logo img{
+    margin-left: 20px;
+
+}
+ 
+nav{
+    margin-right: 70px;
+}
+
+.h{
+    margin-right: 100px;
+    /* border: 1px solid blue; */
+    border-radius: 30px;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 1px;
+}
+
+ .h:hover {
+padding: 10px;
+border: 1px solid black;
+background-color: white;
+border-collapse: collapse;
+
+}
+
+
+
+
+
+
+
 .container1{
      text-align: center; 
     margin-left: 60%;
@@ -159,7 +206,7 @@ h1 {
 }
 
 html{
-    font-size: 95.5%;
+    font-size: 69.5%;
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
