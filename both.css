@@ -269,9 +269,123 @@ html{
 section{
     padding:2rem 9%;
 }
+html {
+    font-size: 69.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.footer {
+    background: #ffee80;
+    padding-bottom: 8rem;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem; /* Added padding for smaller screens */
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    color: #130f40;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    color: #666;
+    text-decoration: none; /* Ensure links look clean */
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    color: #130f40;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    font-size: 2rem;
+    color: #130f40;
+}
+
+.footer .credit a {
+    color: white;
+    background-color: darkgreen;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+}
+
+.footer .credit a:hover {
+    color: white;
+    background-color: tomato;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        padding-bottom: 5rem;
+    }
+
+    .footer .box-container {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .footer .box-container .box h3 {
+        font-size: 2rem;
+    }
+
+    .footer .box-container .box a {
+        font-size: 1.3rem;
+        padding: 0.8rem 0;
+    }
+
+    .footer .credit {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 60%; /* Adjust font size for very small screens */
+    }
+
+    .footer {
+        padding-bottom: 3rem;
+    }
+
+    .footer .box-container .box h3 {
+        font-size: 1.8rem;
+    }
+
+    .footer .box-container .box a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    .footer .credit {
+        font-size: 1.6rem;
+    }
+}
 
 
-
+/* 
 @media (max-width:991px){
 
     html{
@@ -333,7 +447,7 @@ section{
         font-size: 2rem;
     }
 
-}
+} */
 
 @media (max-width:450px){
 
@@ -384,5 +498,35 @@ section{
     }
     p{
         font-size: 2em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow dynamic height */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Add some padding */
+    }
+
+    .logo img {
+        margin: 0; /* Remove margin for better alignment */
+    }
+
+    nav {
+        width: 100%; /* Make navigation take full width */
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: space-around; /* Space items evenly */
+        margin-top: 10px; /* Space between logo and nav */
+    }
+
+    .h {
+        margin-right: 0; /* Remove right margin on mobile */
+        margin-bottom: 10px; /* Add spacing between items */
+        font-size: 10px; /* Slightly reduce font size */
+        padding: 10px; /* Add some padding for touch targets */
+        border-radius: 15px; /* Adjust border radius */
     }
 }

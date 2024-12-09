@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-607cc7b2-0857-4911-8285-5b3e00066c41" data-elfsight-app-lazy></div>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
     <style>
-        body {
-	font-family: Arial, sans-serif;
-	background-color: #f4f4f4;
-}
+        
 
 .container {
 	width: 50%;
@@ -284,6 +288,34 @@ background-color: white;
 border-collapse: collapse;
 
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow dynamic height */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Add some padding */
+    }
+
+    .logo img {
+        margin: 0; /* Remove margin for better alignment */
+    }
+
+    nav {
+        width: 100%; /* Make navigation take full width */
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: space-around; /* Space items evenly */
+        margin-top: 10px; /* Space between logo and nav */
+    }
+
+    .h {
+        margin-right: 0; /* Remove right margin on mobile */
+        margin-bottom: 10px; /* Add spacing between items */
+        font-size: 1.3rem; /* Slightly reduce font size */
+        padding: 10px; /* Add some padding for touch targets */
+        border-radius: 15px; /* Adjust border radius */
+    }
+}
 
     </style>
     
@@ -292,10 +324,10 @@ border-collapse: collapse;
             <img src="/images/Screenshot 2024-09-25 115550.png" style="border-radius: 100px;" width="100px" height="100px">
         </div>
         <nav>
-            <a href="" class="h"> containers for Home</a>
-            <a href="" class="h">containers for shop</a>
-            <a href="" class="h">Container for events</a>
-            <a href="" class="h">About Us</a>
+            <a href="/forhome.html" class="h"> container Home</a>
+            <a href="/forshop.html" class="h">container Shop</a>
+            <a href="/forevent.html" class="h">Container Events</a>
+            <!-- <a href="" class="h">About Us</a> -->
             <!-- <a href="" class="h"> Why Us</a>
             <a href="" class="h">Sign Up</a> -->
         </nav>
@@ -317,7 +349,7 @@ border-collapse: collapse;
             <div class="info-item">
                 <i class="fa-solid fa-envelope"></i>
                 <span>Email:</span>
-                <p>info@example.com</p>
+                <p>vibrvester@gmail.com</p>
             </div>
         </div>
         -<form>
@@ -346,21 +378,21 @@ border-collapse: collapse;
     
             <div class="box">
                 <h3>quick links</h3>
-                <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
+                <a href="/index.html"> <i class="fas fa-arrow-right"></i> Home </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> Trucks </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> Services </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> Contact </a>
+                <a href="/buy.html"> <i class="fas fa-arrow-right"></i> Contact </a>
             </div>
     
-            <!-- <div class="box">
-                <h3>contact info</h3> -->
-                <!-- <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a> -->
-                <!-- <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-                <a href="mailto:ooo@gmail.com"> <i class="fas fa-envelope"></i> info@TruckVibe </a>
+            <div class="box">
+                <h3>contact info</h3> 
+                <!-- <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>  -->
+                 <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                <a href="mailto:ooo@gmail.com"> <i class="fas fa-envelope"></i>vibrvester@gmail.com </a>
                 <a href="#"> <i class="fas fa-map-marker-alt"></i> City - USA - 000000 </a>
-            </div> -->
+            </div> 
     
             <div class="box">
                 <h3>contact info</h3>
