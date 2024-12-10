@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
     padding: 0;
@@ -26,9 +27,9 @@ header{
 
 }
  
-nav{
+ nav{
     margin-right: 70px;
-}
+} 
 
 .h{
     margin-right: 100px;

@@ -16,8 +16,8 @@ body{
 .br{
     font-size: 25px;
     color: white;
-    text-align: center;
-    margin: 30px;
+    /* text-align: center;
+    margin: 30px; */
    
 }
 
@@ -63,7 +63,7 @@ body{
     text-align: center;
   }
   .py{
-    font-size: 25px;
+    font-size: 1.8rem;
     color: white; 
   }
 
@@ -172,8 +172,8 @@ section{
   
   h1 {
     font-size: 5vw; /* Adjusted font size */
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
     color: white;
 }
 html {
@@ -266,9 +266,7 @@ section {
     .footer .credit {
         font-size: 1.8rem;
     }
-    .br{
-
-    }
+     
 }
 
 @media (max-width: 480px) {
@@ -294,6 +292,157 @@ section {
     }
 }
 
+
+
+ 
+
+
+    
+
+
+@media (max-width: 600px) {
+    h1{
+        margin-top: 30px;
+        font-size: 3rem;
+        
+    }
+
+     
+    .py{
+    font-size: 2rem;
+    margin-left: 20px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins';
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        width: 100%;
+    }
+    .shop .shape{
+        border-radius: 10px;
+          font-size: 1.5rem;
+          font-weight: bold;
+           
+    }
+
+     .shop{
+        margin: 0;
+        padding: 0;
+        width: 120px;
+        height: 40px;
+        border: none;
+         margin-left: 40%;
+         
+     }
+}
+
+/* Tablets (from 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1{
+        margin-top: 30px;
+        font-size: 3.5rem;
+        
+    }
+
+     
+    .py{
+    font-size: 2.8rem;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 400px;
+    margin-top: 20px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        width: 100%;
+    }
+    .shop .shape{
+        border-radius: 10px;
+          font-size: 2rem;
+          font-weight: bold;
+           
+    }
+
+     .shop{
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        height: 50px;
+        border: none;
+         margin-left: 40%;
+         
+     }
+     .pl{
+         color: red;
+     }
+}
+
+/* Desktops (from 901px upward) */
+@media (min-width: 901px) {
+    h1{
+        margin-top: 30px;
+        font-size: 3.5rem;
+        
+    }
+
+     
+    .py{
+    font-size: 2.8rem;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 400px;
+    margin-top: 20px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        width: 50%;
+        margin-left: 20%;
+    }
+    .shop .shape{
+        border-radius: 10px;
+          font-size: 2rem;
+          font-weight: bold;
+           
+    }
+
+     .shop{
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        height: 50px;
+        border: none;
+         margin-left: 40%;
+         
+     }
+     .pl{
+        margin-top: 30px;
+     } 
+}
  
 
 
