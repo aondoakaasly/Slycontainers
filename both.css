@@ -1,4 +1,5 @@
-header{
+
+ header{
     width: 100%;
     height: 15vh;
     display: flex;
@@ -17,10 +18,6 @@ header{
 
 }
  
-nav{
-    margin-right: 70px;
-}
-
 .h{
     margin-right: 100px;
     /* border: 1px solid blue; */
@@ -337,6 +334,8 @@ section {
     padding: 2rem 9%;
 }
 
+
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .footer {
@@ -502,31 +501,4 @@ section {
 }
 
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack elements vertically */
-        height: auto; /* Allow dynamic height */
-        align-items: flex-start; /* Align items to the start */
-        padding: 10px; /* Add some padding */
-    }
-
-    .logo img {
-        margin: 0; /* Remove margin for better alignment */
-    }
-
-    nav {
-        width: 100%; /* Make navigation take full width */
-        display: flex;
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        justify-content: space-around; /* Space items evenly */
-        margin-top: 10px; /* Space between logo and nav */
-    }
-
-    .h {
-        margin-right: 0; /* Remove right margin on mobile */
-        margin-bottom: 10px; /* Add spacing between items */
-        font-size: 10px; /* Slightly reduce font size */
-        padding: 10px; /* Add some padding for touch targets */
-        border-radius: 15px; /* Adjust border radius */
-    }
-}
+ 
