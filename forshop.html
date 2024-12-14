@@ -16,8 +16,116 @@
 </head>
 <body>
     
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffee80;
+    /* padding: 10px 20px; */
+    width: 100%;
+    height: 15vh;
+    opacity: 90%;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.line {
+    height: 3px;
+    background-color: white;
+    width: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 2.5rem;
+}
+
+.nav-links li {
+     margin-left: 70px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+         left: 3px;
+        background-color: #333;
+        width: 50%;
+        height: 200px;
+         padding:  0;
+         margin: 0; 
+        border-radius: 5px;
+        z-index: 10;
+        font-size: 2rem;
+         
+    }
+
+    .nav-links li {
+     margin-left: 10px;
+     color: white;
+    text-decoration: none;
+    padding: 10px;
+     
+}
+    .nav-links.active {
+        display: flex; /* Show the links when active */
+        
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger */
+        margin-top: -80px;
+        margin-left: 30px;
+    }
+}
+
+    </style>
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/forhome.html">container Home</a></li>
+            <li><a href="/forshop.html">Container Shop</a></li>
+            <li><a href="/forevent.html"> Container Event</a></li>
+            <li><a href="/both.html">Containers</a></li>
+        </ul>
+    </nav>
+    <!-- <header>
         <div class="logo">
             <img src="/images/Screenshot 2024-09-25 115550.png" style="border-radius: 100px;" width="100px" height="100px">
         </div>
@@ -27,7 +135,7 @@
             <a href="/contact.html" class="h">Container Events</a>
              
         </nav>
-</header> 
+</header>  -->
 
     <section id="section">
     
@@ -250,7 +358,10 @@
     });
     
 
-
+    document.getElementById('hamburger').addEventListener('click', function () {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+});
 
 
 

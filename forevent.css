@@ -326,10 +326,12 @@ p{
     .slider {
         width: 100%; /* Increase the width for better visibility on small screens */
           /* Center align the slider */
+           
     }
     #section{
         display: flex;
         flex-direction: column;
+       
     }
 
     .video-container {
