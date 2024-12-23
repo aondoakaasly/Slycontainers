@@ -46,6 +46,24 @@ const products = [
     { id: '6', name: '40ft open-side containers', price: 4500, image: '/img/shop3.webp', description: 'The 40ft Open-Side Container is a versatile and robust cargo container designed for efficient storage, transportation, and accessibility. Unlike standard shipping containers, this unit features full side access, allowing for seamless loading and unloading of large or irregularly shaped items.' },
 ];
 
+
+
+const productsevent = [
+    { id: '1', name: '40ft open-side containers', price: 9000, image: '/vd/Tiktok_1733561066242.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will' },
+
+    { id: '2', name: '20ft double-door containers', price: 9999, image: '/vd/Tiktok_1733835914172.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will' },
+
+    { id: '3', name: '40ft open-side containers', price: 9000, image: '/vd/Tiktok_1733905804552.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '4', name: '40ft open-side containers', price: 9000, image: '/vd/Tiktok_1731432035999.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '5', name: '40ft open-side containers', price: 9000, image: '/vd/Tiktok_1734154082451.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '6', name: '40ft open-side containers', price: 9999, image: '/vd/Tiktok_1733363472531.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '7', name: '40ft open-side containers', price: 9999, image: '/vd/Tiktok_1733363472531.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+];
+
 //renders all my views here.....
 app.get('/', (req, res)=>{
     res.render("index", {products})
@@ -57,7 +75,7 @@ app.get('/both', (req, res)=>{
 
 
 app.get('/event', (req, res)=>{
-    res.render("forevent")
+    res.render("forevent", { productsevent})
 });
 
 app.get('/shop', (req, res)=>{
@@ -143,6 +161,21 @@ app.get('/cart/:id', (req, res) => {
 
     // Render the product details page with the selected product
     res.render('productDetails', { product });
+});
+
+
+app.get('/cartevent/:id', (req, res) => {
+    const { id } = req.params;
+
+    // Find the product in the array
+    const product = productsevent.find((p) => p.id === id);
+
+    if (!product) {
+        return res.status(404).send('Product not found');
+    }
+
+    // Render the product details page with the selected product
+    res.render('productevent', { product });
 });
 
 //logout rout to destroy all the sessions

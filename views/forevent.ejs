@@ -68,83 +68,50 @@
   </div>
   
 
-    <div class="video-section">
-        <div class="video-container">
-            <video controls>
-                <source src="/vd/Tiktok_1733561066242.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-             <p>The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will</p>
-            <span class="price">$9000</span> <br>
-            <button id="order"><a href="/buy.html">order</a></button>
-        </div>
-        <div class="video-container">
-            <video controls>
-                <source src="/vd/Tiktok_1733835914172.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will</p>
-            <span class="price">$9999</span><br>
-            <button id="order"><a href="/buy.html">order</a></button>
-        </div>
-        <div class="video-container">
-            <video controls>
-                <source src="/vd/Tiktok_1733905804552.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will</p>
-            <span class="price">$9999</span><br>
-            <button id="order"><a href="/buy.html">order</a></button>
-        </div>
-        <div class="video-container">
-            <video controls>
-                <source src="/vd/Tiktok_1731432035999.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will</p>
-            <span class="price">$9000</span><br>
-            <button id="order"><a href="/buy.html">order</a></button>
-        </div>
+
+
+
+     <!-- New Arrivals -->
+  <section id="new-arrival" class="section new-arrival">
+    <div class="title">
+      <h1>FOR EVENT</h1>
+      <p>All the latest containers</p>
     </div>
 
-    <div class="video-section">
-        <div class="video-container">
+    <div class="product-center">
+      
+      <% productsevent.forEach(function(product) { %>
+
+      <div class="product-item">
+        <div class="">
+          <a href="#" class="product-thumb">
             <video controls>
-                <source src="/vd/Tiktok_1734154082451.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will</p>
-            <span class="price">$9000</span><br>
-            <button id="order"><a href="/buy.html">order</a></button>
+              <source src="<%= product.image %>" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>      </a>
         </div>
-        <div class="video-container">
-            <video controls>
-                <source src="/vd/Tiktok_1733363472531.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will</p>
-            <span class="price">$9999</span> <br>
-            <button id="order"><a href="/buy.html">order</a></button>
+        <div class="product-info">
+          <a href="#"></a>
+          <h4><%=  product.description %></h4>
         </div>
-        <div class="video-container">
-            <video controls>
-                <source src="/vd/Tiktok_1734873884459.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will</p>
-            <span class="price">$9999</span><br>
-            <button id="order"><a href="/buy.html">order</a></button>
+        <div class="product-info">
+          <a href="#"></a>
+          <h4>$<%=  product.price %></h4>
         </div>
-        <div class="video-container">
-            <video controls>
-                <source src="/vd/Tiktok_1735213457079.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will</p>
-            <span class="price">$9000</span><br>
-            <button id="order"><a href="/buy.html">order</a></button>
+
+
+
+        <div class="product-info">
+          <button> <a href="http://localhost:3500/cartevent/<%= product.id %>">Order</a> </button>
         </div>
+        
+      </div>
+
+      <% }); %>
     </div>
+  </section>
+   
+   
     <section class="footer" id="footer">
 
         <div class="box-container">
