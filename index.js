@@ -66,7 +66,14 @@ const productsevent = [
 
 //renders all my views here.....
 app.get('/', (req, res)=>{
-    res.render("index", {products})
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    const cartItemCount = req.session.cart.reduce((total, item) => total + item.quantity, 0);
+    // res.json({ cartItemCount });
+    console.log(cartItemCount)
+    res.render("index", {products, cartItemCount})
 });
 
 app.get('/both', (req, res)=>{
@@ -75,11 +82,25 @@ app.get('/both', (req, res)=>{
 
 
 app.get('/event', (req, res)=>{
-    res.render("forevent", { productsevent})
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    const cartItemCount = req.session.cart.reduce((total, item) => total + item.quantity, 0);
+    // res.json({ cartItemCount });
+    console.log(cartItemCount)
+    res.render("forevent", { productsevent, cartItemCount})
 });
 
 app.get('/shop', (req, res)=>{
-    res.render("forshop")
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    const cartItemCount = req.session.cart.reduce((total, item) => total + item.quantity, 0);
+    // res.json({ cartItemCount });
+    console.log(cartItemCount)
+    res.render("forshop", {cartItemCount})
 });
 
 // Route to add an item to the cart
@@ -147,9 +168,16 @@ app.post('/cart/remove', (req, res) => {
 
 // View cart route
 app.get('/cart', (req, res) => {
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    const cartItemCount = req.session.cart.reduce((total, item) => total + item.quantity, 0);
+    // res.json({ cartItemCount });
+    console.log(cartItemCount)
     const cart = req.session.cart || [];
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    res.render('cart', { cart, total });
+    res.render('cart', { cart, total, cartItemCount });
 
 });
 
@@ -157,6 +185,14 @@ app.get('/cart', (req, res) => {
 // Get product by their ID from the in-memory products array
 app.get('/cart/:id', (req, res) => {
     const { id } = req.params;
+
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    const cartItemCount = req.session.cart.reduce((total, item) => total + item.quantity, 0);
+    // res.json({ cartItemCount });
+    console.log(cartItemCount)
 
     // Find the product in the array
     const product = products.find((p) => p.id === id);
@@ -166,12 +202,20 @@ app.get('/cart/:id', (req, res) => {
     }
 
     // Render the product details page with the selected product
-    res.render('productDetails', { product });
+    res.render('productDetails', { product, cartItemCount });
 });
 
 
 app.get('/cartevent/:id', (req, res) => {
     const { id } = req.params;
+
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    const cartItemCount = req.session.cart.reduce((total, item) => total + item.quantity, 0);
+    // res.json({ cartItemCount });
+    console.log(cartItemCount)
 
     // Find the product in the array
     const product = productsevent.find((p) => p.id === id);
@@ -181,7 +225,7 @@ app.get('/cartevent/:id', (req, res) => {
     }
 
     // Render the product details page with the selected product
-    res.render('productevent', { product });
+    res.render('productevent', { product, cartItemCount });
 });
 
 //logout rout to destroy all the sessions

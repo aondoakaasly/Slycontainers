@@ -42,7 +42,7 @@
            
             <a href="/cart" class="icon">
               <i class="bx bx-cart"></i>
-              <span class="d-flex">0</span>
+              <span class="d-flex"><%= cartItemCount %> </span>
             </a>
           </li>
         </ul>
@@ -51,7 +51,7 @@
          
           <a href="/cart" class="icon">
             <i class="bx bx-cart"></i>
-            <span class="d-flex">0</span>
+            <span class="d-flex"><%=  cartItemCount %> </span>
           </a>
         </div>
 
@@ -85,7 +85,7 @@
                   <td>$<%= (item.price * item.quantity).toFixed(2) %></td>
                   <td>
                       <!-- Form to remove item from cart -->
-                      <form action="https://slycontainers.vercel.app/cart/remove" method="POST" style="display:inline;">
+                      <form action="http://localhost:3500/cart/remove" method="POST" style="display:inline;">
                           <input type="hidden" name="productId" value="<%= item.productId %>">
                           <button type="submit" class="remove-btn">Remove</button>
                       </form>
