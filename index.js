@@ -80,6 +80,16 @@ app.get('/both', (req, res)=>{
     res.render("both")
 });
 
+app.get('/contact', (req, res)=>{
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    const cartItemCount = req.session.cart.reduce((total, item) => total + item.quantity, 0);
+    // res.json({ cartItemCount });
+    console.log(cartItemCount)
+    res.render("contact", {cartItemCount})
+});
 
 app.get('/event', (req, res)=>{
     if (!req.session.cart) {
