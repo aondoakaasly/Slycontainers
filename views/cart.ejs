@@ -85,7 +85,7 @@
                   <td>$<%= (item.price * item.quantity).toFixed(2) %></td>
                   <td>
                       <!-- Form to remove item from cart -->
-                      <form action="http://localhost:3500/cart/remove" method="POST" style="display:inline;">
+                      <form action="https://slycontainers.vercel.app/cart/remove" method="POST" style="display:inline;">
                           <input type="hidden" name="productId" value="<%= item.productId %>">
                           <button type="submit" class="remove-btn">Remove</button>
                       </form>
@@ -101,7 +101,7 @@
               </tr>
               <!-- Add tax and total calculation as needed -->
           </table>
-          <a href="http://localhost:3500/checkout" class="checkout btn">Proceed To Checkout</a>
+          <a href="https://slycontainers.vercel.app/checkout" class="checkout btn">Proceed To Checkout</a>
       </div>
   </div>
 

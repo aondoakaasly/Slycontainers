@@ -93,7 +93,7 @@
           <h1><%= product.name %></h1>
           <div class="price">$<%= product.price %></div>
           
-          <form class="form" action="https://www.latoyaandstyles.com/cart/add" method="post">
+          <form class="form" action="https://slycontainers.vercel.app/cart/add" method="post">
             <input type="hidden" name="productId" value="<%= product.id %>" />
             <input type="hidden" name="productImage" value="<%= product.img %>" />
               <input type="text" name="quantity" placeholder="1"  required />
