@@ -117,7 +117,10 @@ app.post('/cart/add', (req, res) => {
         }
 
         console.log('Cart after update:', req.session.cart);
-        res.json({ message: 'Item added to cart', cart: req.session.cart });
+        res.redirect('/cart');
+
+        // console.log('Cart after update:', req.session.cart);
+        // res.json({ message: 'Item added to cart', cart: req.session.cart });
     } catch (err) {
         console.error('Error adding item to cart:', err);
         res.status(500).send('Error adding item to cart');
@@ -144,7 +147,10 @@ app.post('/cart/remove', (req, res) => {
 
 // View cart route
 app.get('/cart', (req, res) => {
-    res.json({ cart: req.session.cart || [] });
+    const cart = req.session.cart || [];
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    res.render('cart', { cart, total });
+
 });
 
 
