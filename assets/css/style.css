@@ -1,0 +1,449 @@
+
+h1{
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    color: red;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.877);
+    margin: 0;
+    padding: 0;
+    
+
+} 
+.br{
+    font-size: 25px;
+    color: white;
+    /* text-align: center;
+    margin: 30px; */
+   
+}
+
+.container{
+  margin-left: 30%;
+  
+}
+  
+  
+  
+ .shop{
+    /* background: linear-gradient(#ffcc57, #1b1b1b,#f8bc2f); */
+    background-color: #f8bc2f;
+    /* width: 100%; */
+    width: 190px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+     margin-left: 45%; 
+    margin-top: 50px; 
+  }
+
+  button .shape{
+    text-decoration: none;
+   padding-top: 50px;
+   color: #fff;
+   font-size: 20px;
+   font-weight: 300px;
+  } 
+  
+  button:hover{
+    background: #000;
+    color: #ffcc57;
+  }
+
+  button .shape:hover{
+    color: #ffcc57;
+  }
+  .pl {
+    margin-bottom: 60px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+  .py{
+    font-size: 1.8rem;
+    color: white; 
+  }
+
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+
+.footer{
+    background:#ffee80;
+    padding-bottom: 8rem;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    padding:1rem 0;
+    color: #130f40;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    padding:1rem 0;
+    color:  #666;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:  #130f40;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:1.5rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 2rem;
+    color: #130f40;
+}
+
+.footer .credit a{
+    color: white;
+    background-color: darkgreen;
+}
+
+
+.footer .credit a:hover{
+    color: white;
+    background-color: tomato;
+}
+
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  #whatsapp-button:hover {
+    background-color: #1ebe5b;
+  }
+  
+  h1 {
+    font-size: 5vw; /* Adjusted font size */
+    /* align-items: center;
+    text-align: center; */
+    color: white;
+}
+html {
+    font-size: 69.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.footer {
+    background: #ffee80;
+    padding-bottom: 8rem;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem; /* Added padding for smaller screens */
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    color: #130f40;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    color: #666;
+    text-decoration: none; /* Ensure links look clean */
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    color: #130f40;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    font-size: 2rem;
+    color: #130f40;
+}
+
+.footer .credit a {
+    color: white;
+    background-color: darkgreen;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+}
+
+.footer .credit a:hover {
+    color: white;
+    background-color: tomato;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        padding-bottom: 5rem;
+    }
+
+    .footer .box-container {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .footer .box-container .box h3 {
+        font-size: 2rem;
+    }
+
+    .footer .box-container .box a {
+        font-size: 1.3rem;
+        padding: 0.8rem 0;
+    }
+
+    .footer .credit {
+        font-size: 1.8rem;
+    }
+     
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 60%; /* Adjust font size for very small screens */
+    }
+
+    .footer {
+        padding-bottom: 3rem;
+    }
+
+    .footer .box-container .box h3 {
+        font-size: 1.8rem;
+    }
+
+    .footer .box-container .box a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    .footer .credit {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+ 
+
+
+    
+
+
+@media (max-width: 600px) {
+    h1{
+        margin-top: 30px;
+        font-size: 3rem;
+        
+    }
+
+     
+    .py{
+    font-size: 2rem;
+    margin-left: 20px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins';
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        width: 100%;
+    }
+    .shop .shape{
+        border-radius: 10px;
+          font-size: 1.5rem;
+          font-weight: bold;
+           
+    }
+
+     .shop{
+        margin: 0;
+        padding: 0;
+        width: 120px;
+        height: 40px;
+        border: none;
+         margin-left: 40%;
+         
+     }
+}
+
+/* Tablets (from 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1{
+        margin-top: 30px;
+        font-size: 3.5rem;
+        
+    }
+
+     
+    .py{
+    font-size: 2.8rem;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 400px;
+    margin-top: 20px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        width: 100%;
+    }
+    .shop .shape{
+        border-radius: 10px;
+          font-size: 2rem;
+          font-weight: bold;
+           
+    }
+
+     .shop{
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        height: 50px;
+        border: none;
+         margin-left: 40%;
+         
+     }
+     .pl{
+         color: red;
+     }
+}
+
+/* Desktops (from 901px upward) */
+@media (min-width: 901px) {
+    h1{
+        margin-top: 30px;
+        font-size: 3.5rem;
+        
+    }
+
+     
+    .py{
+    font-size: 2.8rem;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 400px;
+    margin-top: 20px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    img{
+        width: 50%;
+        margin-left: 20%;
+    }
+    .shop .shape{
+        border-radius: 10px;
+          font-size: 2rem;
+          font-weight: bold;
+           
+    }
+
+     .shop{
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        height: 50px;
+        border: none;
+         margin-left: 40%;
+         
+     }
+     .pl{
+        margin-top: 30px;
+     } 
+}
+ 
+
+
+

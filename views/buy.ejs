@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-607cc7b2-0857-4911-8285-5b3e00066c41" data-elfsight-app-lazy></div>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <style>
+        
+
+.container {
+	width: 50%;
+	margin: 40px auto;
+	background-color: rgba(255, 0, 119, 0.041);
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+h1 {
+	text-align: center;
+}
+
+.contact-info {
+	margin-bottom: 20px;
+}
+
+.info-item {
+	margin-bottom: 10px;
+}
+
+.info-item i {
+	font-size: 24px;
+	margin-right: 10px;
+}
+
+.info-item span {
+	font-weight: bold;
+}
+
+form {
+	margin-top: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"] {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+textarea {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+input[type="submit"] {
+	background-color: black;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: red;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 71.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.footer{
+    background:#ffee80;
+    padding-bottom: 8rem;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    padding:1rem 0;
+    color: #130f40;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    padding:1rem 0;
+    color:  #666;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:  #130f40;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:1.5rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 2rem;
+    color: #130f40;
+}
+
+.footer .credit a{
+    color: white;
+    background-color: darkgreen;
+}
+
+
+.footer .credit a:hover{
+    color: white;
+    background-color: tomato;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+
+    .header.active{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: block;
+    }
+
+    #menu-btn.fa-times{
+        transform:rotate(180deg);
+    }
+
+    #login-btn .btn{
+        display: none;
+       
+    }
+    #reg-btn .btn{
+        margin-left: 200px;
+    }
+
+    #login-btn i{
+        display: block;
+        margin-left: 220px;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background: #fff;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar a{
+        margin:2rem;
+        display: block;
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}
+
+
+header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    background-color:white;
+    align-items: center;
+    background-color: #ffcc57;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.logo img{
+    margin-left: 20px;
+
+}
+ 
+nav{
+    margin-right: 70px;
+}
+
+.h{
+    margin-right: 100px;
+    /* border: 1px solid blue; */
+    border-radius: 30px;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 1px;
+}
+
+ .h:hover {
+padding: 10px;
+border: 1px solid black;
+background-color: white;
+border-collapse: collapse;
+
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow dynamic height */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Add some padding */
+    }
+
+    .logo img {
+        margin: 0; /* Remove margin for better alignment */
+    }
+
+    nav {
+        width: 100%; /* Make navigation take full width */
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: space-around; /* Space items evenly */
+        margin-top: 10px; /* Space between logo and nav */
+    }
+
+    .h {
+        margin-right: 0; /* Remove right margin on mobile */
+        margin-bottom: 10px; /* Add spacing between items */
+        font-size: 1.3rem; /* Slightly reduce font size */
+        padding: 10px; /* Add some padding for touch targets */
+        border-radius: 15px; /* Adjust border radius */
+    }
+}
+
+    </style>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffee80;
+    /* padding: 10px 20px; */
+    width: 100%;
+    height: 15vh;
+    opacity: 90%;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.line {
+    height: 3px;
+    background-color: white;
+    width: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 2.5rem;
+}
+
+.nav-links li {
+     margin-left: 70px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+         left: 3px;
+        background-color: #333;
+        width: 50%;
+        height: 200px;
+         padding:  0;
+         margin: 0; 
+        border-radius: 5px;
+        z-index: 10;
+        font-size: 2rem;
+         
+    }
+
+    .nav-links li {
+     margin-left: 10px;
+     color: white;
+    text-decoration: none;
+    padding: 10px;
+     
+}
+    .nav-links.active {
+        display: flex; /* Show the links when active */
+        
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger */
+        margin-top: -80px;
+        margin-left: 30px;
+    }
+}
+
+    </style>
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/forhome.html">container Home</a></li>
+            <li><a href="/forshop.html">Container Shop</a></li>
+            <li><a href="/forevent.html"> Container Event</a></li>
+            <li><a href="/both.html">Containers</a></li>
+            <li><a href="/index.html">Home</a></li>
+        </ul>
+    </nav>
+    <!-- <header>
+        <div class="logo">
+            <img src="/images/Screenshot 2024-09-25 115550.png" style="border-radius: 100px;" width="100px" height="100px">
+        </div>
+        <nav>
+            <a href="/forhome.html" class="h"> container Home</a>
+            <a href="/forshop.html" class="h">container Shop</a>
+            <a href="/forevent.html" class="h">Container Events</a>
+             
+        </nav>
+</header> -->
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>Phone:</span>
+                <p>+1234567890</p>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-map-pin"></i>
+                <span>Address:</span>
+                <p>123 Main St, Anytown, USA</p>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email:</span>
+                <p>vibrvester@gmail.com</p>
+            </div>
+        </div>
+        -<form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>-
+    </div>
+
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+    
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Indionesia </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Japan </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> France </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Russia </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+            </div>
+    
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="/index.html"> <i class="fas fa-arrow-right"></i> Home </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Trucks </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Services </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
+                <a href="/buy.html"> <i class="fas fa-arrow-right"></i> Contact </a>
+            </div>
+    
+            <div class="box">
+                <h3>contact info</h3> 
+                <!-- <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>  -->
+                 <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                <a href="mailto:ooo@gmail.com"> <i class="fas fa-envelope"></i>vibrvester@gmail.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> City - USA - 000000 </a>
+            </div> 
+    
+            <div class="box">
+                <h3>contact info</h3>
+                <a href=""> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-tiktok"></i> Tiktok</a>
+                <a href="https://t.me/Vestercontainers"> <i class="fab fa-instagram"></i> Instagram </a>
+                <a href="#"> <i class="fab fa-telegram"></i> Telegram </a>
+                <a href="#"> <i class="fab fa-whatsapp"></i> Whatsapp</a>
+            </div>
+    
+        </div>
+    
+        <div class="credit"> Inaffiliation with <a href="">Truck Exporter</a> | all rights reserved </div>
+    
+    </section>
+    
+    <script>
+         document.getElementById('hamburger').addEventListener('click', function () {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+});
+    </script>
+</body>
+</html>

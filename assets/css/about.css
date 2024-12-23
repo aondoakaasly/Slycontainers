@@ -1,0 +1,64 @@
+h1{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    margin-left: 20%;
+    margin-top: 30px;
+}
+
+.ex{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.more{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.pic{
+    height: 450px;
+    width: 70%;
+    margin-left: 20%;
+}
+
+.pl{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin-left: 20%;
+    margin-top: 20px; 
+}
+
+h2{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    margin-left: 20%;
+    margin-top: 30px;  
+}
+
+.con{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .team{
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+}

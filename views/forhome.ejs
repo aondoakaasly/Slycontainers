@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="forhome.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-607cc7b2-0857-4911-8285-5b3e00066c41" data-elfsight-app-lazy></div>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffee80;
+    /* padding: 10px 20px; */
+    width: 100%;
+    height: 20vh;
+    opacity: 90%;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.line {
+    height: 3px;
+    background-color: white;
+    width: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 2.5rem;
+}
+
+.nav-links li {
+     margin-left: 70px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+         left: 3px;
+        background-color: #333;
+        width: 50%;
+        height: 170px;
+         /* padding:  0;
+         margin: 0;  */
+         margin-left: 100px;
+         margin-top: -60px;
+        border-radius: 5px;
+        z-index: 999;
+        font-size: 1.5rem;
+         
+    }
+
+    .nav-links li {
+     margin-left: 10px;
+     color: white;
+    text-decoration: none;
+    padding: 7px;
+    /* line-height: 30px; */
+   
+     
+}
+    .nav-links.active {
+        display: flex; /* Show the links when active */
+        
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger */
+        margin-top: -80px;
+        margin-left: 30px;
+        z-index: 999;
+    }
+}
+
+    </style>
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/forhome.html">container Home</a></li>
+            <li><a href="/forshop.html">Container Shop</a></li>
+            <li><a href="/forevent.html"> Container Event</a></li>
+            <li><a href="/both.html">Containers</a></li>
+            <li><a href="/index.html">Home</a></li>
+        </ul>
+    </nav>
+    <!-- <header>
+        <div class="logo">
+            <img src="/images/Screenshot 2024-09-25 115550.png" style="border-radius: 100px;" width="100px" height="100px">
+        </div>
+        <nav>
+            <a href="/forhome.html" class="h"> container Home</a>
+            <a href="/forshop.html" class="h">container Shop</a>
+            <a href="#" class="h">Container Events</a>
+             
+        </nav>
+</header> -->
+
+<section id="section">
+    
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="/img/1732200622246-removebg-preview.png" alt="Image 1">
+                
+            </div>
+            <div class="slide">
+                <img src="/img/1732200626183.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200630137.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200659417.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200637996.jpg" alt="Image 3">
+            </div>
+             
+            <div class="slide">
+                <img src="/img/1732200641163.jpg" alt="Image 3">
+            </div>
+
+            <div class="slide">
+                <img src="/img/1732200644316.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200641163.jpg" alt="Image 3">
+            </div>
+
+        </div>
+        <button class="prev" id="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" id="prev" onclick="moveSlide(1)">&#10095;</button>
+        <p>2 bed 1 bath
+            Payment plan accepted
+            The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters (312 square feet).  </p>
+        <span class="price">$8999</span>
+                <button id="order"><a href="/buy.html">order</a></button>
+    </div>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="/img/1732200840895.jpg" alt="Image 1">
+                
+            </div>
+            <div class="slide">
+                <img src="/img/1732200863750.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200871519.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200875287.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200878798.jpg" alt="Image 3">
+            </div>
+             
+        </div>
+        <button class="prev" id="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" id="prev" onclick="moveSlide(1)">&#10095;</button>
+        <p>2 bed 1 bath
+            Payment plan accepted
+            The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters (312 square feet).  </p>
+        <span class="price">$8999</span>
+        <button id="order"><a href="/buy.html">order</a></button>
+    </div>
+
+
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="/img/1732200713550.jpg" alt="Image 1">
+                
+            </div>
+            <div class="slide">
+                <img src="/img/1732200716476.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200719131.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200722581.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/1732200727635.jpg" alt="Image 3">
+            </div>
+             
+        </div>
+        <button class="prev" id="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" id="prev" onclick="moveSlide(1)">&#10095;</button>
+        <p>2 bed 1 bath
+            Payment plan accepted
+            The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters (312 square feet).  </p>
+        <span class="price">$8999</span>
+        <button id="order"><a href="/buy.html">order</a></button>
+    </div>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="/img/WhatsApp Image 2024-12-06 at 20.47.57.jpeg" alt="Image 1">
+                
+            </div>
+            <div class="slide">
+                <img src="/img/WhatsApp Image 2024-12-06 at 20.47.58.jpeg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="/img/WhatsApp Image 2024-12-06 at 20.47.59.jpeg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/WhatsApp Image 2024-12-06 at 20.48.00.jpeg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/WhatsApp Image 2024-12-06 at 20.48.01.jpeg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/WhatsApp Image 2024-12-06 at 20.48.02.jpeg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/WhatsApp Image 2024-12-06 at 20.48.03.jpeg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="/img/WhatsApp Image 2024-12-06 at 20.48.04.jpeg" alt="Image 3">
+            </div>
+
+        </div>
+        <button class="prev" id="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" id="prev" onclick="moveSlide(1)">&#10095;</button>
+        <p>2 bed 1 bath
+            Payment plan accepted
+            The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters (312 square feet).  </p>
+        <span class="price">$8999</span>
+        <button id="order"><a href="/buy.html">order</a></button>
+    </div>
+
+</section>
+
+<div class="video-section">
+    <div class="video-container">
+        <video controls>
+            <source src="/vd/1733309976015.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>3 bed 1 bath
+            Payment plan accepted </p>
+        <span class="price">$9000</span>
+        <button id="order"><a href="/buy.html">order</a></button>
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="/vd/1733308108725.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>4bedroom 1 bath
+            Payment plan accepted </p>
+        <span class="price">$9999</span>
+        <button id="order"><a href="/buy.html">order</a></button>
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="/vd/Tiktok_1735121154660.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>4bed 1 bath
+            Payment plan accepted</p>
+        <span class="price">$9999</span>
+        <button id="order"><a href="/buy.html">order</a></button>
+    </div>
+</div>
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our branches</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Indionesia </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Japan </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> France </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Russia </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="/index.html"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Trucks </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Services </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
+            <a href="/buy.html"> <i class="fas fa-arrow-right"></i> Contact </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <!-- <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a> -->
+            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="mailto:ooo@gmail.com"> <i class="fas fa-envelope"></i> info@TruckVibe </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> City - USA - 000000 </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href=""> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https://www.tiktok.com/@vesterbestcontainers?_t=8s4STNshHDq&_r=1"> <i class="fab fa-tiktok"></i> Tiktok</a>
+            <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+            <a href="https://t.me/Vestercontainers"> <i class="fab fa-telegram"></i> Telegram </a>
+            <a href="#"> <i class="fab fa-whatsapp"></i> Whatsapp</a>
+        </div>
+
+    </div>
+
+    <div class="credit"> Inaffiliation with <a href="">Truck Exporter</a> | all rights reserved </div>
+
+</section>
+
+  
+
+     
+    <!-- <script>
+        let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    // Calculate which slide to display
+    const slidesContainer = document.querySelector('.slides');
+    const offset = -currentIndex * 100; // Percentage offset
+    slidesContainer.style.transform = `translateX(${offset}%)`;
+}
+
+function moveSlide(direction) {
+    showSlide(currentIndex + direction);
+}
+
+// Show the first slide initially
+showSlide(currentIndex);
+
+
+        // document.getElementById("ham").addEventListener("click",function(){
+        //     document.getElementById("dog").classList.toggle("active")
+        // })
+    </script> -->
+
+
+    <script>
+        document.querySelectorAll('.slider').forEach(slider => {
+    const slidesContainer = slider.querySelector('.slides');
+    const slides = slider.querySelectorAll('.slide');
+    const prevButton = slider.querySelector('.prev');
+    const nextButton = slider.querySelector('.next');
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
+
+        // Update the slide position
+        const offset = -currentIndex * 100; // Calculate percentage offset
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+    };
+
+    // Event listeners for buttons
+    prevButton.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    // Initialize slider
+    showSlide(currentIndex);
+});
+
+
+
+document.getElementById('hamburger').addEventListener('click', function () {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+});
+    </script>
+</body>
+</html>
