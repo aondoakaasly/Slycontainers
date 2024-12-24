@@ -33,7 +33,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); 
 
 const products = [
-    { id: '1', name: '40ft open-side containers', price: 1000, image: '/img/1732200957489.jpg', description: 'The 40ft Open-Side Container is a versatile and robust cargo container designed for efficient storage, transportation, and accessibility. Unlike standard shipping containers, this unit features full side access, allowing for seamless loading and unloading of large or irregularly shaped items.' },
+    { id: '1', name: '40ft open-side containers', price: 3000, image: '/img/1732200957489.jpg', description: 'The 40ft Open-Side Container is a versatile and robust cargo container designed for efficient storage, transportation, and accessibility. Unlike standard shipping containers, this unit features full side access, allowing for seamless loading and unloading of large or irregularly shaped items.' },
 
     { id: '2', name: '20ft double-door containers', price: 3000, image: '/img/1732200960154.jpg', description: 'The 40ft Open-Side Container is a versatile and robust cargo container designed for efficient storage, transportation, and accessibility. Unlike standard shipping containers, this unit features full side access, allowing for seamless loading and unloading of large or irregularly shaped items.' },
 
