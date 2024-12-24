@@ -113,6 +113,18 @@ app.get('/shop', (req, res)=>{
     res.render("forshop", {cartItemCount})
 });
 
+
+app.get('/both', (req, res)=>{
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    const cartItemCount = req.session.cart.reduce((total, item) => total + item.quantity, 0);
+    // res.json({ cartItemCount });
+    console.log(cartItemCount)
+    res.render("both", {cartItemCount})
+});
+
 // Route to add an item to the cart
 app.post('/cart/add', (req, res) => {
     const { productId, quantity, productImage } = req.body;
@@ -248,6 +260,8 @@ app.get('/logout', (req, res) => {
     });
 });
 
+
+app.get('/checkout', (req, res)=>{})
 
 app.use((req, res, next) => {
     res.status(404).render('404');

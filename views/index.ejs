@@ -55,6 +55,10 @@
           <li class="nav-item">
             <a href="/contact" class="nav-link">Contact</a>
           </li>
+
+          <li class="nav-item">
+            <a href="/both" class="nav-link">Containers</a>
+          </li>
          
           <li class="icons d-flex">
        
@@ -175,7 +179,7 @@
           <h4>$<%=  product.price %></h4>
         </div>
         <ul class="icons">
-          <li><a href="https://slycontainers.vercel.app/cart/<%= product.id %>"><i class="bx bx-cart"> </i></a> </li>
+          <li><a href="/cart/<%= product.id %>"><i class="bx bx-cart"> </i></a> </li>
         </ul>
         
       </div>
@@ -219,7 +223,7 @@
         <a href="/contact" class="btn btn-1">Contact</a>
       </div>
       <div class="col">
-        <form action="https://slycontainers.vercel.app/subscribe" method="post">
+        <form action="/subscribe" method="post">
           <div>
             <input type="email" name="email" id="email" placeholder="Email Address">
           <button type="submit" class="signupbtn">Send</button>
@@ -260,11 +264,11 @@
       </div>
 
       <div class="col d-flex">
-        <span><a href=""><i class='bx bxl-instagram-alt'> </i></a> </span>
-        <span>  <a href="h"> <i class='bx bxl-whatsapp' ></i></a></span>
-        <span>  <a href=""> <i class="bx bx-envelope icon'" ></i></a></span>
-        <span>  <a href=""> <i class='bx bxl-tiktok' ></i></a></span>
-        <span>  <a href=""> <i class='bx bxl-telegram' ></i></a></span>
+        <!-- <span><a href=""><i class='bx bxl-instagram-alt'> </i></a> </span> -->
+        <span>  <a href="tel:+1(405)862-9760"> <i class='bx bxl-whatsapp' ></i></a></span>
+        <!-- <span>  <a href=""> <i class="bx bx-envelope icon'" ></i></a></span> -->
+        <span>  <a href="https://www.facebook.com/share/1Xz7CpdRZ6/?mibextid=LQQJ4d"> <i class='bx bxl-facebook' ></i></a></span>
+        <!-- <span>  <a href=""> <i class='bx bxl-telegram' ></i></a></span> -->
 
       </div>
     </div>

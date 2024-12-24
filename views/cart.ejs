@@ -16,6 +16,60 @@
       <title>Latoyaandstyles</title>
       <link rel="icon" href="/images/first.jpeg">
     <title>Your Cart</title>
+
+    <style>
+    .popup-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-content .confirm-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.popup-content .cancel-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+    </style>
 </head>
 <body>
     <!-- Navigation (same as before) -->
@@ -85,7 +139,7 @@
                   <td>$<%= (item.price * item.quantity).toFixed(2) %></td>
                   <td>
                       <!-- Form to remove item from cart -->
-                      <form action="https://slycontainers.vercel.app/cart/remove" method="POST" style="display:inline;">
+                      <form action="/cart/remove" method="POST" style="display:inline;">
                           <input type="hidden" name="productId" value="<%= item.productId %>">
                           <button type="submit" class="remove-btn">Remove</button>
                       </form>
@@ -101,9 +155,56 @@
               </tr>
               <!-- Add tax and total calculation as needed -->
           </table>
-          <a href="https://slycontainers.vercel.app/checkout" class="checkout btn">Proceed To Checkout</a>
+          <button  class="checkout btn" id="checkoutBtn"> Checkout</button>
       </div>
   </div>
+
+
+
+  <!-- Popup Modal -->
+<div id="popupModal" class="popup-modal">
+  <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>Checkout Confirmation</h2>
+      <p>Are you sure you want to proceed to checkout?</p>
+      <button class="confirm-btn">Confirm</button>
+      <button class="cancel-btn">Cancel</button>
+  </div>
+</div>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    const popupModal = document.getElementById('popupModal');
+    const closeBtn = popupModal.querySelector('.close-btn');
+    const cancelBtn = popupModal.querySelector('.cancel-btn');
+
+    // Show the modal
+    checkoutBtn.addEventListener('click', () => {
+        popupModal.style.display = 'block';
+    });
+
+    // Hide the modal on close button click
+    closeBtn.addEventListener('click', () => {
+        popupModal.style.display = 'none';
+    });
+
+    // Hide the modal on cancel button click
+    cancelBtn.addEventListener('click', () => {
+        popupModal.style.display = 'none';
+    });
+
+    // Close the modal if user clicks outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === popupModal) {
+            popupModal.style.display = 'none';
+        }
+    });
+});
+
+</script>
 
     <!-- Footer (same as before) -->
     <script src="/js/slider.js"></script>
