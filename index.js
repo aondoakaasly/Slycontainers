@@ -15,7 +15,7 @@ require('dotenv').config();
 //host my express static files
 app.use (express.static(path.join(__dirname, "assets")));
 //allows cross origin resources sharing
-app.use(cors({origin: "http://localhost:3500/", methods: 'GET, POST, PUT, DELETE', allowedHeaders:'Content-Type,authorization'}));
+app.use(cors({origin: "https://slycontainers.vercel.app/", methods: 'GET, POST, PUT, DELETE', allowedHeaders:'Content-Type,authorization'}));
 //creates a session to store user details
 app.use(session({
     secret: "slycontainers",
@@ -64,6 +64,42 @@ const productsevent = [
     { id: '7', name: '40ft open-side containers', price: 9999, image: '/vd/Tiktok_1733363472531.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
 ];
 
+
+const productshomevideo = [
+    { id: '1', name: '40ft open-side containers', price: 9000, image: '/vd/Tiktok_1733561066242.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will' },
+
+    { id: '2', name: '20ft double-door containers', price: 9999, image: '/vd/Tiktok_1733835914172.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will' },
+
+    { id: '3', name: '40ft open-side containers', price: 9000, image: '/vd/Tiktok_1733905804552.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '4', name: '40ft open-side containers', price: 9000, image: '/vd/Tiktok_1731432035999.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '5', name: '40ft open-side containers', price: 9000, image: '/vd/Tiktok_1734154082451.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '6', name: '40ft open-side containers', price: 9999, image: '/vd/Tiktok_1733363472531.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '7', name: '40ft open-side containers', price: 9999, image: '/vd/Tiktok_1733363472531.mp4', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+];
+
+
+const productshomepics = [
+    { id: '1', name: '2 bed 1 bath', price: 8999, image: '/img/1732200622246-removebg-preview.png', description: '2 bed 1 bath Payment plan accepted The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters 312 square feet.' },
+
+    { id: '2', name: '2 bed 1 bath', price: 8999, image: '/img/1732200626183.jpg', description: '2 bed 1 bath Payment plan accepted The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters 312 square feet.' },
+
+    { id: '3', name: '2 bed 1 bath', price: 8999, image: '/img/1732200630137.jpg', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+    { id: '4', name: '2 bed 1 bath', price: 8999, image: '/img/1732200659417.jpg', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '5', name: '2 bed 1 bath', price: 8999, image: '/img/1732200637996.jpg', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+    { id: '6', name: '2 bed 1 bath', price: 8999, image: '/img/1732200641163.jpg', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+    { id: '7', name: '2 bed 1 bath', price: 8999, image: '/img/1732200644316.jpg', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+    { id: '8', name: '2 bed 1 bath', price: 8999, image: '/img/1732200641163.jpg', description: 'The export-oriented multi-functional mobile banquet vehicle adopts high-tech 5D holographic projection techniology, 1,000 backgrounds can be switched at will.' },
+
+
+];
+
+
 //renders all my views here.....
 app.get('/', (req, res)=>{
     if (!req.session.cart) {
@@ -78,6 +114,11 @@ app.get('/', (req, res)=>{
 
 app.get('/both', (req, res)=>{
     res.render("both")
+});
+
+
+app.get('/home', (req, res)=>{
+    res.render("forhome", {productshomepics, productshomevideo})
 });
 
 app.get('/contact', (req, res)=>{
@@ -265,7 +306,7 @@ app.get('/checkout', (req, res)=>{})
 
 app.use((req, res, next) => {
     res.status(404).render('404');
-  });
+});
   
 //listening to the port
 app.listen(port, ()=>{

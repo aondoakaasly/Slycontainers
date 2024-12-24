@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="forhome.css">
+    <link rel="stylesheet" href="/css/forhome.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -15,6 +15,56 @@
 </head>
 <body>
     <style>
+         .popup-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-content .confirm-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.popup-content .cancel-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
         * {
     margin: 0;
     padding: 0;
@@ -122,11 +172,10 @@ body {
             <div class="line"></div>
         </div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="/forhome.html">container Home</a></li>
-            <li><a href="/forshop.html">Container Shop</a></li>
-            <li><a href="/forevent.html"> Container Event</a></li>
-            <li><a href="/both.html">Containers</a></li>
-            <li><a href="/index.html">Home</a></li>
+            <li><a href="/">container for Home</a></li>
+            <li><a href="/shop">Container for Shop</a></li>
+            <li><a href="/event"> Container for Event</a></li>
+            <li><a href="/both">Containers</a></li>
         </ul>
     </nav>
     <!-- <header>
@@ -179,8 +228,8 @@ body {
         <p>2 bed 1 bath
             Payment plan accepted
             The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters (312 square feet).  </p>
-        <span class="price">$8999</span>
-                <button id="order"><a href="/buy.html">order</a></button>
+        <span class="price">$8999</span> <br>
+                <button class="checkout btn"  id="checkoutBtn" style="background-color: #f9e03d; width: 100px; height: 30px; margin: 10px; border-radius: 20px;">order</button>
     </div>
 
     <div class="slider">
@@ -208,8 +257,8 @@ body {
         <p>2 bed 1 bath
             Payment plan accepted
             The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters (312 square feet).  </p>
-        <span class="price">$8999</span>
-        <button id="order"><a href="/buy.html">order</a></button>
+        <span class="price">$8999</span> <br>
+        <button class="checkout btn"  id="checkoutBtn" style="background-color: #f9e03d; width: 100px; height: 30px; margin: 10px; border-radius: 20px;">order</button>
     </div>
 
 
@@ -239,8 +288,8 @@ body {
         <p>2 bed 1 bath
             Payment plan accepted
             The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters (312 square feet).  </p>
-        <span class="price">$8999</span>
-        <button id="order"><a href="/buy.html">order</a></button>
+        <span class="price">$8999</span> <br>
+        <button class="checkout btn"  id="checkoutBtn" style="background-color: #f9e03d; width: 100px; height: 30px; margin: 10px; border-radius: 20px;">order</button>
     </div>
 
     <div class="slider">
@@ -277,8 +326,8 @@ body {
         <p>2 bed 1 bath
             Payment plan accepted
             The 2-Bed Soho Modern doubles the fun with a length of 40 feet (12 meters) and a total surface of just under 30 square meters (312 square feet).  </p>
-        <span class="price">$8999</span>
-        <button id="order"><a href="/buy.html">order</a></button>
+        <span class="price">$8999</span> <br>
+        <button class="checkout btn"  id="checkoutBtn" style="background-color: #f9e03d; width: 100px; height: 30px; margin: 10px; border-radius: 20px;">order</button>
     </div>
 
 </section>
@@ -291,8 +340,8 @@ body {
         </video>
         <p>3 bed 1 bath
             Payment plan accepted </p>
-        <span class="price">$9000</span>
-        <button id="order"><a href="/buy.html">order</a></button>
+        <span class="price">$9000</span> <br>
+        <button class="checkout btn"  id="checkoutBtn" style="background-color: #f9e03d; width: 100px; height: 30px; margin: 10px; border-radius: 20px;">order</button>
     </div>
     <div class="video-container">
         <video controls>
@@ -301,8 +350,8 @@ body {
         </video>
         <p>4bedroom 1 bath
             Payment plan accepted </p>
-        <span class="price">$9999</span>
-        <button id="order"><a href="/buy.html">order</a></button>
+        <span class="price">$9999</span> <br>
+        <button class="checkout btn"  id="checkoutBtn" style="background-color: #f9e03d; width: 100px; height: 30px; margin: 10px; border-radius: 20px;">order</button>
     </div>
     <div class="video-container">
         <video controls>
@@ -311,8 +360,8 @@ body {
         </video>
         <p>4bed 1 bath
             Payment plan accepted</p>
-        <span class="price">$9999</span>
-        <button id="order"><a href="/buy.html">order</a></button>
+        <span class="price">$9999</span> <br>
+        <button class="checkout btn"  id="checkoutBtn" style="background-color: #f9e03d; width: 100px; height: 30px; margin: 10px; border-radius: 20px;">order</button>
     </div>
 </div>
 <section class="footer" id="footer">
@@ -361,7 +410,17 @@ body {
 
 </section>
 
-  
+    <!-- Popup Modal -->
+<div id="popupModal" class="popup-modal">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Checkout Confirmation</h2>
+        <p>Send Us a Message via email or Whatsapp</p> <br>
+        <p>+1(405)862-9760</p> 
+        <p>vibrvester@gmail.com</p>
+        
+    </div>
+  </div>
 
      
     <!-- <script>
@@ -396,6 +455,38 @@ showSlide(currentIndex);
         // })
     </script> -->
 
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            const popupModal = document.getElementById('popupModal');
+            const closeBtn = popupModal.querySelector('.close-btn');
+            const cancelBtn = popupModal.querySelector('.cancel-btn');
+        
+            // Show the modal
+            checkoutBtn.addEventListener('click', () => {
+                popupModal.style.display = 'block';
+            });
+        
+            // Hide the modal on close button click
+            closeBtn.addEventListener('click', () => {
+                popupModal.style.display = 'none';
+            });
+        
+            // Hide the modal on cancel button click
+            cancelBtn.addEventListener('click', () => {
+                popupModal.style.display = 'none';
+            });
+        
+            // Close the modal if user clicks outside of it
+            window.addEventListener('click', (event) => {
+                if (event.target === popupModal) {
+                    popupModal.style.display = 'none';
+                }
+            });
+        });
+        
+        </script>
 
     <script>
         document.querySelectorAll('.slider').forEach(slider => {
