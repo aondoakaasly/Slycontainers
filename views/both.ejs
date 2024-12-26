@@ -6,8 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <script src="https://static.elfsight.com/platform/platform.js" async></script> 
-    <div class="elfsight-app-e3a3f102-2da2-441a-8f95-1af877a13428" data-elfsight-app-lazy></div>
 <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="/css/both.css">
@@ -70,9 +68,6 @@ color: #fff;
 }
 
 
-body {
-font-family: Arial, sans-serif;
-}
 
 .navbar {
 display: flex;
@@ -116,6 +111,19 @@ background-color: rgba(255, 255, 255, 0.2);
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+  .popup-content{
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: #fff;
+padding: 20px;
+border-radius: 8px;
+width: 300px;
+height: 200px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+  }
 .nav-links {
    display: none; /* Hide the links by default */
    flex-direction: column;
@@ -150,6 +158,22 @@ padding: 7px;
 }
 
 
+}
+
+@media only screen and (max-width: 567px) {
+  .popup-content{
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: #fff;
+padding: 20px;
+border-radius: 8px;
+width: 300px;
+height: 200px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+  }
 }
 
 </style>
@@ -412,13 +436,7 @@ button.addEventListener('click', showModal);
 
 </script>
 
-<script>
-     document.getElementById('hamburger').addEventListener('click', function () {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-});
 
-</script>
 
 <script src="/js/index.js"></script>
 

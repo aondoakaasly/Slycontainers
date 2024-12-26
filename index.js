@@ -304,9 +304,9 @@ app.get('/logout', (req, res) => {
 
 app.get('/checkout', (req, res)=>{})
 
-app.use((req, res, next) => {
-    res.status(404).render('404');
-});
+// app.use((req, res, next) => {
+//     res.status(404).render('404');
+// });
   
 //listening to the port
 app.listen(port, ()=>{
