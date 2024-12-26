@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/forhome.css">
+    <link rel="stylesheet" href="/css/niyu.css">
+
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
 <div class="elfsight-app-607cc7b2-0857-4911-8285-5b3e00066c41" data-elfsight-app-lazy></div>
-
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -165,19 +169,39 @@ body {
 }
 
     </style>
-    <nav class="navbar">
-        <div class="hamburger" id="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <div class="navigation">
+        <div class="nav-center container d-flex">
+          <!-- <a href="/" class="logo"><h1>Latoyaandstyles</h1></a> -->
+  
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="/home" class="nav-link">Container Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/event" class="nav-link">Container for Event</a>
+            </li>
+            <li class="nav-item">
+              <a href="/shop" class="nav-link">Container for Shop</a>
+            </li>
+            <li class="nav-item">
+              <a href="/both" class="nav-link">Containers</a>
+            </li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link"></a>
+            </li>
+           
+          </ul>
+  
+         
+  
+          <div class="hamburger">
+            <i class="bx bx-menu-alt-left"></i>
+          </div>
         </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="/">container for Home</a></li>
-            <li><a href="/shop">Container for Shop</a></li>
-            <li><a href="/event"> Container for Event</a></li>
-            <li><a href="/both">Containers</a></li>
-        </ul>
-    </nav>
+      </div>
     <!-- <header>
         <div class="logo">
             <img src="/images/Screenshot 2024-09-25 115550.png" style="border-radius: 100px;" width="100px" height="100px">
@@ -457,16 +481,23 @@ showSlide(currentIndex);
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const checkoutBtn = document.getElementById('checkoutBtn');
+            const checkoutBtn = document.querySelectorAll('#checkoutBtn');
             const popupModal = document.getElementById('popupModal');
             const closeBtn = popupModal.querySelector('.close-btn');
             const cancelBtn = popupModal.querySelector('.cancel-btn');
-        
-            // Show the modal
-            checkoutBtn.addEventListener('click', () => {
-                popupModal.style.display = 'block';
-            });
+
+              // Function to show modal
+    const showModal = () => {
+        popupModal.style.display = 'block';
+    };
+                   
+
+               // Add click event to all checkout buttons
+        checkoutBtn.forEach(button => {
+        button.addEventListener('click', showModal);
+    });
+
+
         
             // Hide the modal on close button click
             closeBtn.addEventListener('click', () => {
@@ -484,7 +515,7 @@ showSlide(currentIndex);
                     popupModal.style.display = 'none';
                 }
             });
-        });
+      
         
         </script>
 
@@ -530,5 +561,6 @@ document.getElementById('hamburger').addEventListener('click', function () {
     navLinks.classList.toggle('active');
 });
     </script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
