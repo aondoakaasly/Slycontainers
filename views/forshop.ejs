@@ -20,6 +20,142 @@
     <!-- font awesome cdn link  -->
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .popup-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    }
+    
+    .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    }
+    
+    .popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    }
+    
+    .popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    .popup-content .confirm-btn {
+    background-color: #28a745;
+    color: #fff;
+    }
+    
+    .popup-content .cancel-btn {
+    background-color: #dc3545;
+    color: #fff;
+    }
+    
+    
+    body {
+    font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffee80;
+    /* padding: 10px 20px; */
+    width: 100%;
+    height: 20vh;
+    opacity: 90%;
+    }
+    
+    
+    
+    .line {
+    height: 3px;
+    background-color: white;
+    width: 30px;
+    transition: all 0.3s ease;
+    }
+    
+    .nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 2.5rem;
+    }
+    
+    .nav-links li {
+    margin-left: 70px;
+    }
+    
+    .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    }
+    
+    .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+    .nav-links {
+       display: none; /* Hide the links by default */
+       flex-direction: column;
+       position: absolute;
+       top: 60px; /* Position below the navbar */
+        left: 3px;
+       background-color: #333;
+       width: 50%;
+       height: 170px;
+        /* padding:  0;
+        margin: 0;  */
+        margin-left: 100px;
+        margin-top: -60px;
+       border-radius: 5px;
+       z-index: 999;
+       font-size: 1.5rem;
+        
+    }
+    
+    .nav-links li {
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    /* line-height: 30px; */
+    
+    
+    }
+    .nav-links.active {
+       display: flex; /* Show the links when active */
+       
+    }
+    
+    
+    }
+    
+    </style>
 </head>
 <body>
     
@@ -95,7 +231,7 @@
             <button class="next" id="prev" onclick="moveSlide(1)">&#10095;</button>
             <p>20ft double-door containers</p>
             <span class="price">$5000</span> <br>
-                    <button id="order"> <a href="/buy.html">Order</a></button>
+            <button class="checkout btn"  id="checkoutBtn" >order</button>
         </div>
     
         <div class="slider">
@@ -122,7 +258,7 @@
             <button class="next" id="prev" onclick="moveSlide(1)">&#10095;</button>
             <p>20ft double-door containers</p>
             <span class="price">$5000</span> <br>
-                    <button id="order"> <a href="/buy.html">Order</a></button>
+            <button class="checkout btn"  id="checkoutBtn" >order</button>
         </div>
     
     
@@ -151,7 +287,7 @@
             <button class="next" id="prev" onclick="moveSlide(1)">&#10095;</button>
             <p>40ft open-side containers</p>
             <span class="price">$5000</span><br>
-                    <button id="order"><a href="">Order </a></button>
+            <button class="checkout btn"  id="checkoutBtn" >order</button>
         </div>
         <div class="slider">
             <div class="slides">
@@ -176,7 +312,7 @@
             <button class="next" id="prev" onclick="moveSlide(1)">&#10095;</button>
             <p>40ft open-side containers</p>
             <span class="price">$5000</span><br>
-                    <button id="order"> <a href="">Order</a></button>
+            <button class="checkout btn"  id="checkoutBtn" >order</button>
         </div>
         </section>
 
@@ -189,7 +325,7 @@
                 <p>3 bed 1 bath
                     Payment plan accepted </p>
                 <span class="price">$9000</span><br>
-                <button id="order"><a href="">order</a></button>
+                <button class="checkout btn"  id="checkoutBtn" >order</button>
             </div>
             <div class="video-container">
                 <video controls>
@@ -199,7 +335,7 @@
                 <p>4bedroom 1 bath
                     Payment plan accepted </p>
                 <span class="price">$9999</span><br>
-                <button id="order"><a href="">order</a></button>
+                <button class="checkout btn"  id="checkoutBtn" >order</button>
             </div>
             <div class="video-container">
                 <video controls>
@@ -209,9 +345,21 @@
                 <p>4bed 1 bath
                     Payment plan accepted</p>
                 <span class="price">$9999</span><br>
-                <button id="order"><a href="">order</a></button>
+                <button class="checkout btn"  id="checkoutBtn" >order</button>
             </div>
         </div>
+
+             <!-- Popup Modal -->
+<div id="popupModal" class="popup-modal">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Checkout Confirmation</h2>
+        <p>Send Us a Message via email or Whatsapp</p> <br>
+        <p>+1(405)862-9760</p> 
+        <p>vibrvester@gmail.com</p>
+        
+    </div>
+  </div>
 
          <!-- Footer -->
   <footer class="footer">
@@ -231,7 +379,7 @@
         <a href="#"> <i class="fas fa-arrow-right"></i> Services </a>
         <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
         <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
-        <a href="/buy.html"> <i class="fas fa-arrow-right"></i> Contact </a>
+        <a href="/contact"> <i class="fas fa-arrow-right"></i> Contact </a>
       </div>
 
       <div class="col d-flex">
@@ -251,6 +399,48 @@
       </div>
     </div>
   </footer>
+
+
+
+  <script>
+
+    const checkoutBtn = document.querySelectorAll('#checkoutBtn');
+    const popupModal = document.getElementById('popupModal');
+    const closeBtn = popupModal.querySelector('.close-btn');
+    const cancelBtn = popupModal.querySelector('.cancel-btn');
+  
+      // Function to show modal
+  const showModal = () => {
+  popupModal.style.display = 'block';
+  };
+           
+  
+       // Add click event to all checkout buttons
+  checkoutBtn.forEach(button => {
+  button.addEventListener('click', showModal);
+  });
+  
+  
+  
+    // Hide the modal on close button click
+    closeBtn.addEventListener('click', () => {
+        popupModal.style.display = 'none';
+    });
+  
+    // Hide the modal on cancel button click
+    cancelBtn.addEventListener('click', () => {
+        popupModal.style.display = 'none';
+    });
+  
+    // Close the modal if user clicks outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === popupModal) {
+            popupModal.style.display = 'none';
+        }
+    });
+  
+  
+  </script>
         
         <script>
             document.querySelectorAll('.slider').forEach(slider => {
