@@ -181,6 +181,11 @@ app.get('/both', (req, res)=>{
     res.render("both", {cartItemCount})
 });
 
+app.get('/sitemap', (req, res) => {
+   res.sendFile(path.join(__dirname, 'views', 'sitemap.xml'))
+});
+
+
 // Route to add an item to the cart
 app.post('/cart/add', (req, res) => {
     const { productId, quantity, productImage } = req.body;
