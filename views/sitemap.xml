@@ -3,51 +3,62 @@
 
   <!-- Home Page -->
   <url>
-    <loc>https://www.yourdomain.com/</loc>
+    <loc>https://www.vestercontainers.com/</loc>
     <lastmod>2024-12-27</lastmod>
     <priority>1.0</priority>
   </url>
 
   <!-- About Page -->
   <url>
-    <loc>https://www.yourdomain.com/about</loc>
+    <loc>https://www.vestercontainers.com/both</loc>
     <lastmod>2024-12-27</lastmod>
     <priority>0.8</priority>
   </url>
 
   <!-- Services Page -->
   <url>
-    <loc>https://www.yourdomain.com/services</loc>
+    <loc>https://www.vestercontainers.com/home</loc>
     <lastmod>2024-12-27</lastmod>
     <priority>0.8</priority>
   </url>
 
   <!-- Individual Service Pages -->
   <url>
-    <loc>https://www.yourdomain.com/services/service-1</loc>
+    <loc>https://www.vestercontainers.com/contact</loc>
     <lastmod>2024-12-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.yourdomain.com/services/service-2</loc>
+    <loc>https://www.vestercontainers.com/event</loc>
     <lastmod>2024-12-27</lastmod>
     <priority>0.7</priority>
   </url>
 
   <!-- FAQ Page -->
   <url>
-    <loc>https://www.yourdomain.com/faq</loc>
+    <loc>https://www.yourdomain.com/shop</loc>
     <lastmod>2024-12-27</lastmod>
     <priority>0.6</priority>
   </url>
 
   <!-- Contact Us Page -->
   <url>
-    <loc>https://www.yourdomain.com/contact</loc>
+    <loc>https://www.vestercontainers.com/api/track</loc>
     <lastmod>2024-12-27</lastmod>
     <priority>0.8</priority>
   </url>
 
 
+  <url>
+    <loc>https://www.vestercontainers.com/checkout</loc>
+    <lastmod>2024-12-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.vestercontainers.com/cart</loc>
+    <lastmod>2024-12-27</lastmod>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
