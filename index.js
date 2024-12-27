@@ -99,6 +99,11 @@ const productshomepics = [
 
 ];
 
+// Dummy data for tracking
+const trackingData = {
+    "12345": { lat: 40.7128, lng: -74.0060 }, // Example: New York
+    "67890": { lat: 34.0522, lng: -118.2437 }, // Example: Los Angeles
+  };
 
 //renders all my views here.....
 app.get('/', (req, res)=>{
@@ -154,7 +159,17 @@ app.get('/shop', (req, res)=>{
     res.render("forshop", {cartItemCount})
 });
 
-
+// Endpoint to fetch tracking data
+app.get("/api/track", (req, res) => {
+    const trackingId = req.query.trackingId;
+  
+    if (trackingData[trackingId]) {
+      //res.json(trackingData[trackingId]);
+      res.render('tracking', )
+    } else {
+      res.status(404).send("Tracking ID not found!");
+    }
+  });
 app.get('/both', (req, res)=>{
     if (!req.session.cart) {
         req.session.cart = [];

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Tracking</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSMEj1iwkolorT1eUYesOcNOdAZruUBus"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #map {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+    }
+    .tracking-form {
+      margin: 20px;
+      text-align: center;
+    }
+    .tracking-form input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      margin-right: 10px;
+    }
+    .tracking-form button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Track Your Product</h1>
+  <div class="tracking-form">
+    <input type="text" id="trackingId" placeholder="Enter Tracking ID">
+    <button onclick="trackProduct()">Track</button>
+  </div>
+  <div id="map"></div>
+
+  <script>
+    let map, marker;
+
+    // Initialize the map
+    function initMap(lat = 0, lng = 0) {
+      const mapOptions = {
+        zoom: 5,
+        center: { lat, lng },
+      };
+      map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+      marker = new google.maps.Marker({
+        position: { lat, lng },
+        map: map,
+        title: "Product Location",
+      });
+    }
+
+    // Update marker on the map
+    function updateMap(lat, lng) {
+      const position = { lat, lng };
+      map.setCenter(position);
+      marker.setPosition(position);
+    }
+
+    // Track product based on tracking ID
+    async function trackProduct() {
+      const trackingId = document.getElementById("trackingId").value;
+      if (!trackingId) {
+        alert("Please enter a tracking ID.");
+        return;
+      }
+
+      try {
+        // Simulate API request (replace this URL with your backend endpoint)
+        const response = await fetch(`/api/track?trackingId=${trackingId}`);
+        if (!response.ok) throw new Error("Tracking ID not found!");
+
+        const data = await response.json();
+        const { lat, lng } = data;
+
+        if (map && marker) {
+          updateMap(lat, lng);
+        } else {
+          initMap(lat, lng);
+        }
+      } catch (error) {
+        alert(error.message);
+      }
+    }
+
+    // Initialize the map with a default location
+    initMap();
+  </script>
+</body>
+</html>
